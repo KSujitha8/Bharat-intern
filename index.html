@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="C:\Users\Suji\suk\sujiimg.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web developer</p>
+                <h1>Hello..!! <br>This is <span>Sujitha k</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- --------about--------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="C:\Users\Suji\image\sujipic1.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>A dedicated and motivated professional seeking for a challenging role where I can utilize my skills.To enhance my professional skills , capabilities and knowledge in an organization which recognizes the value of hard work. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python</span></li>
+                            <li><span>Basics in Java</span></li>
+                            <li><span>Html</span></li>
+                            <li><span>Basics in SQL</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2021-2025</span><br>VELAMMAL INSTITUTE OF TECHNOLOGY - BE/CSE(at current 3rd year)</li>
+                            <li><span>2020-2021</span><br>RMK MATRIC HIGHER SECONDARY SCHOOL - 12th</li>
+                            <li><span>2018-2019</span><br>PADUA HIGH SCHOOL (MUMBAI) - 10th</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ----------contact----------- -->
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>sujithanaidu83@gmail.com</p>
+            </div>
+            <div class="contact-right">
+
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+        }
+        function opentab(tabname){
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
